@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class DefaultDarkTheme {
   static List<Color> primaryColors = const [
     Colors.black,
-    Colors.grey,
+    Color.fromARGB(255, 85, 85, 85),
   ];
   static List<Color> secondaryColors = const [
     Colors.black,
@@ -327,6 +327,8 @@ class DefaultDarkTheme {
       opacity: 1,
       size: 24,
     ),
+    listTileTheme:
+        const ListTileThemeData(textColor: Color.fromARGB(255, 150, 180, 196)),
     sliderTheme: const SliderThemeData(
       activeTrackColor: null,
       inactiveTrackColor: null,
