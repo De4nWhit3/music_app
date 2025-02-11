@@ -9,9 +9,15 @@ class SongsLoaded extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: songs.length,
-      itemBuilder: (context, index) => ListTile(
-        title: Text(songs[index].title),
-      ),
+      itemBuilder: (context, index) {
+        final song = songs[index];
+        return ListTile(
+          title: Text(song.title),
+          leading: const Icon(Icons.play_arrow),
+          iconColor: song.songColor.color,
+          onTap: () => debugPrint(song.title),
+        );
+      },
     );
   }
 }
