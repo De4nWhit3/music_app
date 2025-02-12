@@ -30,6 +30,7 @@ class MusicPage extends StatelessWidget {
     icon: const Icon(Icons.music_note),
     name: 'music',
     child: const MusicPageWrapper(),
+    detailView: const MusicPageDetailView(),
   );
 
   @override
@@ -46,6 +47,17 @@ class MusicPage extends StatelessWidget {
           return const SongsError();
         }
       },
+    );
+  }
+}
+
+class MusicPageDetailView extends StatelessWidget {
+  const MusicPageDetailView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text('Youtube Play functionality in progress'),
     );
   }
 }

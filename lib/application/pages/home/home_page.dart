@@ -99,6 +99,14 @@ class _HomePageState extends State<HomePage> {
                   builder: (context) =>
                       HomePage.tabs[widget.currentIndex].child),
             }),
+            secondaryBody: SlotLayout(config: <Breakpoint, SlotLayoutConfig>{
+              Breakpoints.mediumAndUp: SlotLayout.from(
+                key: const Key('secondary-body'),
+                builder: (context) =>
+                    HomePage.tabs[widget.currentIndex].detailView ??
+                    const SizedBox.shrink(),
+              )
+            }),
           ),
         ),
       ),
